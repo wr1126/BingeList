@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binge List 🍿</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script async src="js/add.js"></script>
+    <script async src="js/app.js"></script>
+  </head>
+  <body>
+    <section id="title">
+      <h1>Binge List</h1>
+      <button>+</button>
+    </section>
+    <section id="forms">
+      <div class="list">
+        <h1>책</h1>
+        <input
+          class="categoryInput"
+          type="text"
+          placeholder="카테고리"
+          style="display: none"
+        />
+        <form>
+          <input
+            class="itemInput"
+            type="text"
+            placeholder="항목을 입력해주세요."
+          />
+        </form>
+        <ul>
+          <li>어린왕자</li>
+          <li>물고기는 존재하지 않는다</li>
+          <li>부의 추월차선</li>
+        </ul>
+      </div>
+      <div class="list">
+        <h1>영화</h1>
+        <input
+          class="categoryInput"
+          type="text"
+          placeholder="카테고리"
+          style="display: none"
+        />
+        <form>
+          <input
+            class="itemInput"
+            type="text"
+            placeholder="항목을 입력해주세요."
+          />
+        </form>
+        <ul>
+          <li>판타스틱 소녀백서</li>
+          <li>파니 핑크</li>
+          <li>오펀:천사의 비밀</li>
+          <li>녹터널 애니멀스</li>
+        </ul>
+      </div>
+      <!-- 
+      <div class="list">
+        <h1></h1>
+        <input class="categoryInput" type="text" placeholder="카테고리" />
+        <form>
+          <input
+            class="itemInput"
+            type="text"
+            placeholder="항목을 입력해주세요."
+          />
+        </form>
+        <ul></ul>
+      </div> -->
+    </section>
+    <div id="form" style="display: none">
+      <form id="mainForm">
+        <input id="mainInput" type="text" required placeholder="items" />
+      </form>
+      <ul id="bingeList"></ul>
+    </div>
+  </body>
+</html>

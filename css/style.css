@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3% 5%;
+  font-family: "Varela Round", sans-serif;
+  background-color: #ff4a4a;
+}
+
+#title {
+  margin-bottom: 3%;
+  text-align: center;
+  color: white;
+}
+#title h1 {
+  display: inline-block;
+  font-size: 8rem;
+}
+#title button {
+  all: unset;
+  float: right;
+  font-size: 8rem;
+  font-weight: 300;
+  height: 9rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+#forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 4rem;
+}
+#forms .list {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 3rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-size: 2rem;
+}
+#forms .list h1 {
+  font-size: 3rem;
+}
+#forms .list .categoryInput {
+  all: unset;
+  font-size: 3rem;
+}
+#forms .list .itemInput {
+  all: unset;
+  display: block;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+#forms .list ul {
+  margin: 2rem 5rem 2rem 5rem;
+  text-align: center;
+}
+#forms .list li {
+  line-height: 5rem;
+}
+#forms .list::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
