@@ -1,51 +1,17 @@
-const mainForm = document.getElementById("mainForm");
-const mainInput = document.getElementById("mainInput");
-const mainList = document.getElementById("bingeList");
+const categoryInput = document.querySelector(".categoryInput");
+const categoryName = document.querySelector(".categoryName");
+const itemForm = document.querySelector("form")
 
-let arr = [];
-
-function paintList(itemObj) {
-  const li = document.createElement("li");
-  li.id = itemObj.id;
-  const span = document.createElement("span");
-  span.innerText = itemObj.text;
-  const button = document.createElement("button");
-  button.innerText = "❌";
-  li.appendChild(span);
-  li.appendChild(button);
-  mainList.appendChild(li);
-  button.addEventListener("click", deleteItem);
-}
-
-function saveList() {
-  localStorage.setItem("firstList", JSON.stringify(arr));
-}
-
-function deleteItem(item) {
-  const target = item.target.parentNode;
-  const newArr = arr.filter((temp) => parseInt(target.id) !== temp.id);
-  arr = newArr;
-  saveList();
-  target.remove();
-}
-
-function handleSubmit(event) {
+categoryInput.addEventListener("submit", (event) => {
   event.preventDefault();
-  const bingeItem = mainInput.value;
-  const itemId = Date.now();
-  const itemObj = {
-    text: bingeItem,
-    id: itemId,
-  };
-  arr.push(itemObj);
-  paintList(itemObj);
-  saveList();
-  mainInput.value = "";
-}
+  categoryName.innerText = categoryInput.value;
+  categoryInput.style.display = "none";
+});
 
-mainForm.addEventListener("submit", handleSubmit);
+itemForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const ul = document.querySelector("ul")
+  const li = document.createElement("li")
+  li.innerText = event.target.value
 
-if (localStorage.length !== 0) {
-  arr = JSON.parse(localStorage.getItem("firstList"));
-  arr.forEach(paintList);
-}
+})
