@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Binge List 🍿</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script async src="js/add.js"></script>
-    <script async src="js/app.js"></script>
+    <script async src="js/addList.js"></script>
+    <script async src="js/addItem.js"></script>
   </head>
   <body>
     <section id="title">
@@ -15,7 +15,7 @@
       <button>+</button>
     </section>
     <section id="forms">
-      <div class="list">
+      <!--       <div class="list">
         <h1 class="categoryName">책</h1>
         <input
           class="categoryInput"
@@ -57,12 +57,14 @@
           <li>오펀:천사의 비밀</li>
           <li>녹터널 애니멀스</li>
         </ul>
-      </div>
+      </div> -->
       <!-- 
       <div class="list">
-        <h1></h1>
-        <input class="categoryInput" type="text" placeholder="카테고리" />
-        <form>
+        <h1 class="categoryName"></h1>
+        <form class="categoryForm">
+          <input class="categoryInput" type="text" placeholder="카테고리" />
+        </form>
+        <form class="itemForm">
           <input
             class="itemInput"
             type="text"
@@ -72,11 +74,11 @@
         <ul></ul>
       </div> -->
     </section>
-    <div id="form" style="display: none">
+    <!-- <div id="form" style="display: none">
       <form id="mainForm">
         <input id="mainInput" type="text" required placeholder="items" />
       </form>
       <ul id="bingeList"></ul>
-    </div>
+    </div> -->
   </body>
 </html>
